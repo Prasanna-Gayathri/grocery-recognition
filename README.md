@@ -117,6 +117,7 @@ No paid API tier or billing is required to run any part of this project — ever
 - **Confidence calibration is sensitive to calibration-set quality** — built from the same distribution as training data rather than fully independent held-out real-world photos, which can produce overly tight confidence thresholds.
 - **Gemini free tier has no uptime guarantee** — transient `503` errors are handled via retry-with-backoff and graceful degradation, but a sustained outage will still surface as a clearly marked "temporarily unavailable" section rather than a full failure.
 - No production backend or connected frontend currently exists — the pipeline runs within Colab notebooks.
+<img width="1676" height="642" alt="image" src="https://github.com/user-attachments/assets/7a65f8f3-f990-4c08-9035-bc42394cc377" />
 
 ---
 
