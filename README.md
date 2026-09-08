@@ -4,7 +4,7 @@
 
 SafeScan scans a grocery product's front and back cover images to classify the product, detect allergen conflicts against a user's allergy profile, and generate a nutrition health score — combining a trained multimodal classifier with LLM reasoning and retrieval-grounded verification.
 
-**Guide:** Dr. PadmaKumari P
+
 **Base paper:** Pettersson, Riveiro & Löfström (2024), *Machine Vision and Applications*, [doi:10.1007/s00138-024-01549-9](https://doi.org/10.1007/s00138-024-01549-9)
 
 ---
