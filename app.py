@@ -63,6 +63,8 @@ header[data-testid="stHeader"] { background: transparent; }
 .dark .it { margin-top:12px; font-size:14.5px; line-height:1.5; }
 .dark b { color:#BFE8A8; }
 .disclaimer { color:#5B6E5B; font-size:13px; margin-top:26px; line-height:1.6; border-top:1px solid #DDE8D3; padding-top:14px; }
+.credit { color:#1B5E20; font-weight:700; font-size:14px; margin-top:6px; }
+.credit span { color:#F28C28; }
 div.stButton > button { border-radius:12px; font-weight:700; padding:.6rem 1.2rem; }
 </style>
 """
@@ -207,14 +209,16 @@ def render_result(d, sample=False):
                     unsafe_allow_html=True)
 
     st.markdown('<div class="disclaimer">Decision support, not medical advice. Text recognition can miss or misread words, '
-                'so always check the physical label. The nutrition grade follows the published Nutri-Score method for general foods.</div>',
+                'so always check the physical label. The nutrition grade follows the published Nutri-Score method for general foods.'
+                '<div class="credit">Designed and developed by <span>Prasanna Gayathri T S</span></div></div>',
                 unsafe_allow_html=True)
 
 
 # ---------------------------------------------------------------- landing page
 def render_landing():
     st.markdown('<div class="topbar"><div class="brand">🛒 Safe<span>Scan</span></div>'
-                '<div style="color:#4F6450;font-weight:600">Allergen-aware grocery scanning</div></div>', unsafe_allow_html=True)
+                '<div style="color:#4F6450;font-weight:600">Built by <b style="color:#1B5E20">Prasanna Gayathri T S</b></div></div>',
+                unsafe_allow_html=True)
     st.markdown('<div class="hero"><span class="pill">Allergens</span><span class="pill">Nutri-Score</span>'
                 '<span class="pill">Highlighted label</span><h1>Know what is in your food before you buy it.</h1>'
                 '<p>Take two photos of any grocery pack, the front and the back. SafeScan recognises the product, '
@@ -266,7 +270,9 @@ def render_landing():
         ("3", "Get your verdict", "A safe, conflict or uncertain verdict for your allergies, plus an A to E nutrition grade.")]):
         col.markdown(f'<div class="card"><div class="num">{n}</div><h4>{t}</h4><p>{p}</p></div>', unsafe_allow_html=True)
     st.markdown('<div class="disclaimer">SafeScan: an LLM-driven multimodal approach to fine-grained product recognition with allergen detection. '
-                'Decision support, not medical advice. Always check the physical label.</div>', unsafe_allow_html=True)
+                'Decision support, not medical advice. Always check the physical label.'
+                '<div class="credit">Designed and developed by <span>Prasanna Gayathri T S</span></div></div>',
+                unsafe_allow_html=True)
 
 
 # ---------------------------------------------------------------- sidebar: connection to the Colab brain
